@@ -1,0 +1,50 @@
+{
+    "name": "base-bailey-json",
+    "version": "1.0.0",
+    "description": "",
+    "main": "app.js",
+    "scripts": {
+        "pre-copy": "cd .. && npm run  copy.lib base-baileys-json",
+        "start": "node app.js"
+    },
+    "keywords": [],
+    "dependencies": {
+        "@adiwajshing/baileys": "^5.0.0",
+        "@bot-whatsapp/bot": "latest",
+        "@bot-whatsapp/cli": "latest",
+        "@bot-whatsapp/database": "latest",
+        "@bot-whatsapp/portal": "latest",
+        "@bot-whatsapp/provider": "^0.1.24",
+        "@langchain/community": "^0.0.13",
+        "@langchain/openai": "^0.0.9",
+        "@langchain/pinecone": "^0.0.1",
+        "@pinecone-database/pinecone": "^1.1.2",
+        "@whiskeysockets/baileys": "6.5.0",
+        "axios": "^1.6.2",
+        "bot-ws-plugin-openai": "^1.0.6",
+        "cache-manager": "5.2.4",
+        "chromadb": "^1.6.1",
+        "dotenv": "^16.3.1",
+        "express": "^4.18.2",
+        "faiss-node": "^0.5.1",
+        "glob": "^10.3.10",
+        "gpt-3-encoder": "^1.1.4",
+        "langchain": "^0.0.203",
+        "mime-types": "2.1.35",
+        "openai": "^4.20.1",
+        "pdf-parse": "^1.1.1",
+        "pickleparser": "^0.2.1",
+        "pinecone-client": "^2.0.0",
+        "tiktoken": "^1.0.11",
+        "util": "^0.12.5",
+        "wa-sticker-formatter": "^1.6.0",
+        "whatsapp-web.js": "github:pedroslopez/whatsapp-web.js#fix-buttons-list",
+        "xlsx": "^0.18.5"
+    },
+    "devDependencies": {
+        "eslint": "^8.52.0",
+        "eslint-plugin-bot-whatsapp": "latest"
+    },
+    "author": "",
+    "license": "ISC"
+}
