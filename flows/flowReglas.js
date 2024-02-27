@@ -77,7 +77,7 @@ const Reglas = addKeyword(['1SKDDOrjhnadsadsf']).addAnswer(
     async (ctx, {state,gotoFlow,flowDynamic, endFlow}) =>{
         const ISLider = ctx.body
         if(ISLider === '0'){
-            return endFlow('❌ Su solicitud ha sido cancelada')
+            return endFlow('❌ Su solicitud ha sido cancelada\n\nRecuerda que estoy aquí para ayudarte en cualquier momento. No dudes en saludarme nuevamente cuando lo desees o necesites asistencia.')
         }
         const IS = ctx.body.toUpperCase()
         await state.update({IS:IS})
@@ -95,7 +95,7 @@ const Reglas = addKeyword(['1SKDDOrjhnadsadsf']).addAnswer(
     },
     async (ctx, {state,gotoFlow,fallBack,flowDynamic,endFlow}) =>{
         if(ctx.body === '0'){
-            return endFlow('❌ Su solicitud ha sido cancelada')
+            return endFlow('❌ Su solicitud ha sido cancelada\n\nRecuerda que estoy aquí para ayudarte en cualquier momento. No dudes en saludarme nuevamente cuando lo desees o necesites asistencia.')
         }
         const correoLider = ctx.body.toLowerCase();
         if(!correoLider.includes('@softtek.com')){ //Se verifica si ingreso una dirección de email válida. En caso contrario, se le consulta nuevamente.
@@ -144,7 +144,7 @@ const Reglas = addKeyword(['1SKDDOrjhnadsadsf']).addAnswer(
         const ISSofttekian = ctx.body
         console.log("Revisando si La información ingresada por usuario: ",ISSofttekian," existe en nuestra BD o si cancel.")        
         if(ISSofttekian === '0'){
-            return endFlow('❌ Su solicitud ha sido cancelada')
+            return endFlow('❌ Su solicitud ha sido cancelada\n\nRecuerda que estoy aquí para ayudarte en cualquier momento. No dudes en saludarme nuevamente cuando lo desees o necesites asistencia.')
         }
         const nombreEmpleado = findConsultantName(ListaConsultores, ISSofttekian)
         if (nombreEmpleado === 'No se encontró el IS.'){
@@ -163,7 +163,7 @@ const Reglas = addKeyword(['1SKDDOrjhnadsadsf']).addAnswer(
     },
     async (ctx,{state,gotoFlow,endFlow,flowDynamic})=>{
         if(ctx.body === '0'){
-            return endFlow('❌ Su solicitud ha sido cancelada')
+            return endFlow('❌ Su solicitud ha sido cancelada\n\nRecuerda que estoy aquí para ayudarte en cualquier momento. No dudes en saludarme nuevamente cuando lo desees o necesites asistencia.')
         }
         await state.update({rolActualEmpleado:ctx.body})
         const msg_NuevoRolSofttekian = ['¿Cuál será el nuevo rol del Softtekian?\n\nPresiona 0️⃣ para volver al menú principal 🔙']
@@ -175,7 +175,7 @@ const Reglas = addKeyword(['1SKDDOrjhnadsadsf']).addAnswer(
     },
     async (ctx,{state,gotoFlow,endFlow,flowDynamic})=>{
         if(ctx.body === '0'){
-            return endFlow('❌ Su solicitud ha sido cancelada')
+            return endFlow('❌ Su solicitud ha sido cancelada\n\nRecuerda que estoy aquí para ayudarte en cualquier momento. No dudes en saludarme nuevamente cuando lo desees o necesites asistencia.')
         }
         await state.update({rolNuevoEmpleado:ctx.body})
         const msg_SeniorityIS =     [
@@ -189,7 +189,7 @@ const Reglas = addKeyword(['1SKDDOrjhnadsadsf']).addAnswer(
     },
     async (ctx,{state,gotoFlow,endFlow,flowDynamic})=>{
         if(ctx.body === '0'){
-            return endFlow('❌ Su solicitud ha sido cancelada')
+            return endFlow('❌ Su solicitud ha sido cancelada\n\nRecuerda que estoy aquí para ayudarte en cualquier momento. No dudes en saludarme nuevamente cuando lo desees o necesites asistencia.')
         }
         await state.update({ISSeniority:ctx.body})
     }

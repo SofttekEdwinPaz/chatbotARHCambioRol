@@ -13,7 +13,7 @@ const Area2 = addKeyword('3SKDDOrjhnadsadsf').addAnswer(
     },
     async (ctx,{state,gotoFlow,flowDynamic,endFlow}) =>{
         if(ctx.body === '0'){
-            return endFlow('❌ Su solicitud ha sido cancelada')
+            return endFlow('❌ Su solicitud ha sido cancelada\n\nRecuerda que estoy aquí para ayudarte en cualquier momento. No dudes en saludarme nuevamente cuando lo desees o necesites asistencia.')
         }
         
         await state.update({keyTicketJira:ctx.body.toUpperCase()})

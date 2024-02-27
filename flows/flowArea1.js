@@ -9,9 +9,9 @@ const Area1 = addKeyword(['2SKDDOrjhnadsadsf']).addAction(
     ],
     async (ctx, {state,gotoFlow,endFlow}) =>{
         if(ctx.body === '0'){
-            return endFlow('❌ Su solicitud ha sido cancelada')
+            return endFlow('❌ Su solicitud ha sido cancelada\n\nRecuerda que estoy aquí para ayudarte en cualquier momento. No dudes en saludarme nuevamente cuando lo desees o necesites asistencia.')
         }
-        return endFlow('❌ Este flujo se encuentra en desarrollo.')
+        return endFlow('❌ Este flujo se encuentra en desarrollo.\n\nRecuerda que estoy aquí para ayudarte en cualquier momento. No dudes en saludarme nuevamente cuando lo desees o necesites asistencia.')
     }
 )
 
