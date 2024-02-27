@@ -99,7 +99,7 @@ const Reglas = addKeyword(['1SKDDOrjhnadsadsf']).addAnswer(
         }
         const correoLider = ctx.body.toLowerCase();
         if(!correoLider.includes('@softtek.com')){ //Se verifica si ingreso una dirección de email válida. En caso contrario, se le consulta nuevamente.
-            return fallBack()
+            return fallBack('El correo electrónico ingresado no coincide con el dominio esperado. Para continuar, por favor verifica que esté escrito correctamente e inténtalo de nuevo.')
         }
         await state.update({correoLider})
         const myState = state.getMyState()
